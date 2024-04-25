@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natours | <%=doc_title%>
+    </title>
+</head>
+
+<body>
+    <!-- this is including another file here -->
+    <!-- <h1>hello world</h1>
+    <%-include ('_header.ejs')%> -->
+    <header>
+        <div class="container">
+            <h3>i am <%= title %> page</h3>
+        </div>
+    </header>
+    <main>
+        <%- content %>
+    </main>
+    <footer>
+        <%page=2%>
+            <!-- this is how we can declare variable in ejs since it is not displayed in output it is called unbuffered value -->
+            <p> i am footer section of <%= title %> and i am page <%=page*3%>
+            </p>
+    </footer>
+
+</body>
+
+</html>
